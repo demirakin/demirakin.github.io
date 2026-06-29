@@ -61,7 +61,7 @@
 
   /* HERO */
   .hero{ padding:180px 0 110px; }
-  .name{ font-family:var(--display); font-weight:600; font-size:clamp(52px,12vw,148px); line-height:0.92; letter-spacing:-0.04em; text-transform:uppercase; margin-bottom:24px; }
+  .name{ font-family:var(--display); font-weight:600; font-size:clamp(44px,12vw,148px); line-height:0.92; letter-spacing:-0.04em; text-transform:uppercase; margin-bottom:24px; }
   [data-type="serif"] .name{ font-weight:600; text-transform:none; letter-spacing:-0.03em; }
   .role{ font-family:var(--mono); font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--faint); margin-bottom:44px; }
   .tagline{ font-family:var(--display); font-weight:600; font-size:clamp(24px,4.4vw,50px); line-height:1.0; letter-spacing:-0.025em; margin-bottom:30px; }
@@ -284,6 +284,33 @@
   .affil-kale{ width:355px; max-width:92%; }
   .affil-sub{ font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-top:15px; }
   .affil-date{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--faint); margin-top:8px; }
+
+  /* ===== mobile polish ===== */
+  @media (max-width:820px){
+    .nav-inner{ padding:14px 20px; }
+    .brand{ white-space:nowrap; }
+    #langtoggle{ display:none; }
+    .hamburger::after{ content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; }
+    .mpanel{ padding:92px 28px 44px; }
+    .mpanel-lang{ display:inline-flex; margin-top:32px; }
+    .hero{ padding:112px 0 60px; }
+    .hero-headline{ flex:0 0 auto; }
+    .hero-portrait img{ width:min(360px,84%); margin-left:auto; margin-right:auto; }
+  }
+  @media (max-width:720px){
+    .exp{ padding:64px 0; }
+    .about{ padding:64px 0; }
+    .caps{ padding:64px 0; }
+    .project{ padding:30px 0; }
+    .socials{ gap:18px; }
+    .socials a{ padding:8px 2px; }
+  }
+  @media (max-width:600px){
+    .tagline{ font-size:clamp(22px,6vw,50px); }
+    .shead{ margin-bottom:40px; }
+    .affil-kale{ max-width:82%; }
+    .hard-facts div{ padding:14px 20px 0 0; }
+  }
 </style>
 </head>
 <body>
@@ -314,6 +341,10 @@
   <a class="mlink" data-target="#about" data-i18n="nav.about" tabindex="0" role="link">About</a>
   <a href="#" data-cv-download class="mlink">CV</a>
   <a class="mlink" data-target="#contact" data-i18n="nav.contact" tabindex="0" role="link">Contact</a>
+  <div class="toggle langtoggle mpanel-lang">
+    <button data-lang="en" class="active">EN</button>
+    <button data-lang="tr">TR</button>
+  </div>
 </aside>
 
 <header class="hero wrap">
